@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mother's Day!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Removed universal override that caused blank screen */
+        #intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: pink;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+        }
+        #intro h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+        }
+        #intro button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            background: white;
+            color: pink;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+        #content {
+            display: none;
+            background: url('mothersday background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: #333;
+        }
+        header {
+            background-color: rgba(255, 105, 180, 0.9);
+            color: white;
+            padding: 2rem 1rem;
+        }
+        h1, h2, h3, p, li, blockquote {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 0.2em 0.6em;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Dancing Script', cursive;
+        }
+        h2 {
+            font-family: 'Dancing Script', cursive;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            background-color: rgba(255, 228, 225, 0.9);
+            margin: 1rem auto;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            max-width: 700px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        footer {
+            background-color: rgba(255, 182, 193, 0.9);
+            color: #333;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin: 1rem 0;
+        }
+        .gallery {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+        }
+        blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        .heart {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: red;
+            transform: rotate(45deg);
+            animation: floatUp 10s linear infinite;
+            opacity: 0.6;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+        .heart::after {
+            left: -10px;
+            top: 0;
+        }
+        @keyframes floatUp {
+            0% {
+                bottom: -50px;
+                left: calc(100% * var(--x));
+            }
+            100% {
+                bottom: 100%;
+                left: calc(100% * var(--x));
+            }
+        }
+    section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    cursor: url('https://cur.cursors-4u.net/nature/nat-10/nat928.cur'), auto;
+}
+</style>
+</head>
+<body>
+    <div id="intro">
+        <h1>Happy Mother's Day! 💝</h1>
+        <button onclick="enterSite()">Click to Begin</button>
+    </div>
+
+    <div id="content">
+        <header>
+            <h1>Happy Mother's Day, Mom! 💐</h1>
+        </header>
+        <main>
+            <section>
+                <h2>You Mean the World to Me</h2>
+                <p>Thank you for your endless love, strength, and support. Because of your wise advice, you've always been my crutch. I am who I am today because of you.</p>
+                <img src="IMG_7080.jpg" alt="Mom and me at night in front of the Alamo"/>
+            </section>
+
+            <section>
+                <h2>Our Time</h2>
+                <p>All the time spent together, through the ups and downs have made us go through many different stages in our lives. But through it all, I treasure every laugh and every lesson.</p>
+                <img src="IMG_9573.jpg" alt="Family smiling at a busy travel terminal"/>
+            </section>
+
+            <section>
+                <h2>Why I Love You</h2>
+                <ul>
+                    <li>You never give up on your kids, even when times are hard.</li>
+                    <li>You inspire me to be kinder and stronger every day.</li>
+                    <li>You love with your whole heart—and it shows.</li>
+                    <li>You know exactly what to say when I’m feeling down.</li>
+                    <li>You believe in me even when I doubt myself.</li>
+                    <li>You taught me the meaning of selflessness.</li>
+                    <li>You're my safe place in a chaotic world.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>A Favorite Quote</h2>
+                <blockquote>
+                    “A mother’s love is more beautiful than any fresh flower.” — Debasish Mridha
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>A Personal Letter</h2>
+                <p style="text-align: left; padding: 1rem; background-color: #fff; border-left: 5px solid pink;">
+                    Dear Mom,<br><br>
+                    Words will never be enough to thank you for everything. You've carried our family with love and grace, and I admire you more than I can say. Thank you for the countless sacrifices, the smiles on tough days, and for always being my greatest inspiration.<br><br>
+                    Love always,<br>
+                    DJ ❤️
+                </p>
+            </section>
+
+            <section>
+                <h2>I Love You!</h2>
+                <p>Wishing you a day filled with love, relaxation, and all the joy you bring to others every day. You deserve it all and more. 💖</p>
+            </section>
+        </main>
+        <footer>
+            <p>With all my love, always. — DJ ❤️</p>
+        </footer>
+    </div>
+
+    <!-- Floating Hearts -->
+    <script>
+        for (let i = 0; i < 15; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.setProperty('--x', Math.random());
+            heart.style.left = `${Math.random() * 100}%`;
+            document.body.appendChild(heart);
+        }
+
+        function enterSite() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
+<script>
+    // Floating hearts (already exists)
+    for (let i = 0; i < 15; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.setProperty('--x', Math.random());
+        heart.style.left = `${Math.random() * 100}%`;
+        document.body.appendChild(heart);
+    }
+
+    // Section fade-in animation
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Intro transition
+    function enterSite() {
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }
+</script>
+</body>
+</html>
